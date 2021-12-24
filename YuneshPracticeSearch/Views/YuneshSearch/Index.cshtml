@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<script src="~/Content/Pages/jquery-3.3.1.js"></script>
+<script src="~/Content/Pages/jquery.ui.custom.js"></script>
+<script src="~/Content/Pages/YuneshPracticeSearch.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<div class="span6" style="border: 1px solid #cecece;">
+    <input type="text" class="span11" placeholder=" Name" id="txtName" data-toggle="tooltip" title="Search  by Name " />
+    <input type="text" placeholder="Email" id="txtEmail" />
+    <input type="text" placeholder="Address" id="txtAddress" />
+
+
+    <input id="Submit" type="button" value="Submit" onclick="saveCustomer()" />
+</div>
+
+
+<style>
+
+    .ui-autocomplete {
+        max-height: 300px;
+        max-width: 500px;
+        overflow-y: auto; /* prevent horizontal scrollbar */
+        overflow-x: hidden; /* add padding to account for vertical scrollbar */
+        z-index: 9999 !important;
+        padding: 100px;
+        cursor: pointer;
+        background-color: #fff;
+        list-style-type: none;
+    }
+
+        .ui-autocomplete > li {
+            line-height: 21px;
+            border-bottom: 1px solid;
+        }
+
+    #divSearchBox .input-search .form-control {
+        border-radius: 0px !important;
+        margin-top: 5px !important;
+    }
+
+    .ui-autocomplete > li:hover {
+        background-color: #38A1F3;
+        color: white;
+    }
+
+    #divSearchBox .input-search .input-search-icon {
+        left: 0px !important;
+    }
+
+    #divSearchBox .input-search .input-search-icon, .input-search .input-search-close {
+        top: 54% !important;
+    }
+</style>
+
+
